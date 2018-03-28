@@ -12,29 +12,37 @@
 	#define false 0
 #endif
 
+#define CL_USE_DEPRECATED_OPENCL_1_2_APIS
+
  /*****************************************************************
   *						Includes
   *****************************************************************/
+#include "Timer.h"
 
   /*****************************************************************
-  *						Function Declarations
-  *****************************************************************/
-bool OpenCL_Init(const char* Vendor);
-void OpenCL_Destroy();
+   *						Global Variable
+   *****************************************************************/
+static std::ofstream  rwFile;
 
-bool OpenCL_LoadKernel(const char* Filename, const char* Function);
+  /*****************************************************************
+   *						Function Declarations
+   *****************************************************************/
+bool	OpenCL_Init(const char* Vendor);
+void	OpenCL_Destroy();
 
-cl_mem OpenCL_CreateBuffer(cl_uint Argument, cl_mem_flags Flags, size_t Size);
-void   OpenCL_FreeBuffer(cl_mem Buffer);
+bool	OpenCL_LoadKernel(const char* Filename, const char* Function);
 
-bool OpenCL_ConstantInt(cl_uint Argument, int Value);
+cl_mem	OpenCL_CreateBuffer(cl_uint Argument, cl_mem_flags Flags, size_t Size);
+void	OpenCL_FreeBuffer(cl_mem Buffer);
 
-bool OpenCL_ReadData(cl_mem Buffer, size_t Size, void* Data);
-bool OpenCL_WriteData(cl_mem Buffer, size_t Size, void* Data);
+bool	OpenCL_ConstantInt(cl_uint Argument, int Value);
 
-bool OpenCL_Run(int N, size_t* LocalSize);
+bool	OpenCL_ReadData(cl_mem Buffer, size_t Size, void* Data);
+bool	OpenCL_WriteData(cl_mem Buffer, size_t Size, void* Data);
 
-void OpenCL_PrepareLocalSize(int N, size_t* LocalSize);
+bool	OpenCL_Run(int N, size_t* LocalSize);
+
+void	OpenCL_PrepareLocalSize(int N, size_t* LocalSize);
 
 
 #endif // !OPENCL_H

@@ -22,11 +22,13 @@
 #define Timer_h
 //------------------------------------------------------------------------------
 
-#include <stdio.h>
+#include <windows.h>
+#include <ctime>
+
 //------------------------------------------------------------------------------
 
-void   tic(); // Start timer
-double toc(); // Get time interval
+void   CPU_tic(); // Start timer
+double CPU_toc(); // Get time interval
 //------------------------------------------------------------------------------
 
 #endif

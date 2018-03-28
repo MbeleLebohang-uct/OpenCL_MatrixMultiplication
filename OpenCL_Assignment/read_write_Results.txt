@@ -1,0 +1,7 @@
+
+OpenCL WriteData time: 532.205 ms
+OpenCL WriteData time: 20.9667 ms
+OpenCL ReadData time: 0.0717405 ms
+OpenCL WriteData time: 0.687953 ms
+OpenCL WriteData time: 0.160472 ms
+OpenCL ReadData time: 0.10308 ms

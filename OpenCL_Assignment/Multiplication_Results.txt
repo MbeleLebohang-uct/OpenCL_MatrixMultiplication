@@ -1,0 +1,5 @@
+
+Serial: 88878.1 ms
+OpenCL: 0.253357 ms
+Serial: 0.064944 ms
+OpenCL: 0.127622 ms
